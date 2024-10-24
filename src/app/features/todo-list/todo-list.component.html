@@ -1,0 +1,42 @@
+<div #TodoListComponent class="todo-list-container mt-5">
+    <div class="header">
+        <form [formGroup]="todoForm" (ngSubmit)="onSubmit()" class="row justify-content-md-center" >
+            <mat-form-field class="col-3">
+                <mat-label>Titre</mat-label>
+                <input matInput formControlName="title">
+              </mat-form-field>
+              
+    
+              <mat-form-field class="col-4">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description"></textarea>
+              </mat-form-field>
+
+              <button type="submit" class="btn-add col-2 d-flex d-flex align-items-center mt-4  p-2 me-5" mat-icon-button>
+                 <mat-icon>add</mat-icon>
+                <div>Ajouter</div>
+             </button>
+     </form> 
+    </div>
+    <mat-list role="list" class="mat-list mt-4">
+        @for (task of currentData; track task) {
+            <div class="d-flex item-container mb-2 pe-4">
+                <mat-list-item class="mat-list-item">
+                  <span> {{task.title}}  </span>
+              </mat-list-item>
+              <button class="justify-content-end btn-icon-container"  matTooltip="Details" mat-icon-button>
+
+                  <mat-icon>visibility</mat-icon>
+              </button>
+              <button class="justify-content-end btn-icon-container"  matTooltip="Editer" mat-icon-button>
+
+                  <mat-icon class="mat-edite-icon" (click)="onEdit(task.id)" >edit</mat-icon>
+              </button>
+              <button class="justify-content-end btn-icon-container" (click)="onDelete(task.id)" matTooltip="supprimer" mat-icon-button>
+                  <mat-icon class="mat-delete-icon" >delete</mat-icon>
+              </button>
+             
+            </div>
+        }
+    </mat-list>
+</div>

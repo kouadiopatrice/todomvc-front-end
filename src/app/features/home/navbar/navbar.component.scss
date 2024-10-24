@@ -1,0 +1,15 @@
+.navbar-container{
+    mat-list{
+        .item-container{
+            border-radius: 5%;
+            :hover{
+               background-color: rgb(183, 222, 222);
+         }
+         .mat-checkbox{
+            width: 100%;
+         }
+        }
+    }
+}
+
+

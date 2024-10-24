@@ -1,0 +1,28 @@
+<div class="create-todo-container container p-2">
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()" class="row justify-content-md-center" >
+        <mat-form-field class="col-8">
+            <mat-label>Titre</mat-label>
+            <input matInput formControlName="title">
+          </mat-form-field>
+
+          <mat-form-field class="col-8">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+          </mat-form-field>
+
+         
+          <mat-form-field class="col-8" >
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status">
+             <mat-option value="to-do">A faire</mat-option>
+             <mat-option value="in-progress">En cours</mat-option>
+             <mat-option value="finished">Terminé</mat-option>
+            </mat-select>
+         </mat-form-field>
+
+         <div class="d-flex justify-content-end gap-3 mt-4 col-8">
+            <button  type="button" routerLink="/Home/DotoList" mat-raised-button>annuler</button>
+            <button type="submit" mat-flat-button>Valider</button>
+         </div>
+ </form>
+</div>

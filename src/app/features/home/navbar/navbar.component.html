@@ -1,0 +1,14 @@
+<div class="navbar-container mt-5">
+    <mat-list role="list">
+        @for (task of statusTask; track task) {
+            <div class="d-flex item-container pe-4">
+                <mat-list-item class="d-flex item-container" (click)="onSelecteStatus(task.value)">
+                  <mat-checkbox class="mat-checkbox">{{task.label}}</mat-checkbox>
+               
+            </mat-list-item>
+            <span>{{task.total}}</span>
+            </div>
+        }
+    </mat-list>
+    
+</div>

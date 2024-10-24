@@ -1,0 +1,28 @@
+.todo-list-container{
+        .btn-add {
+            border: none;
+            justify-content: center;
+            border-radius: 5px;
+            background-color: rgb(183, 222, 222);
+            height: 10%;
+        }
+    .mat-list{
+        .item-container {
+            background-color: #ffffff;
+            .btn-icon-container{
+                border: none;
+                background-color: #ffffff;
+                .mat-delete-icon{
+                    color: rgb(206, 109, 109)
+                }
+            }
+        }
+    }
+}
+
+::ng-deep{
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+        background-color: #fff !important;
+        height: 10% !important;
+    }
+}
